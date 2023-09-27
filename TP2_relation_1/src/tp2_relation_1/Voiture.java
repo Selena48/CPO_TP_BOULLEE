@@ -11,7 +11,7 @@ package tp2_relation_1;
 public class Voiture {
     
     //Constructor
-    public Voiture(String modele_param, int puissance_param, String marque_param) {
+    public Voiture(String modele_param, String marque_param, int puissance_param) {
     modele = modele_param;
     marque = marque_param;
     puissanceCV = puissance_param;
