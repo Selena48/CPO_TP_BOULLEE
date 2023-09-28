@@ -14,12 +14,26 @@ public class Personne {
     public Personne(String nom_param, String prenom_param) {
     prenom = prenom_param;
     nom = nom_param;
+    nbVoitures = 0;
+    liste_voitures = new Voiture [3] ;
 }
     
     /*Attributs*/
     String prenom;
     String nom;
+    int nbVoitures ;
+    Voiture [] liste_voitures ;
    
+    public boolean ajouter_voiture( Voiture voiture_a_ajouter) {
+     if (voiture_a_ajouter.proprietaire != null){
+         return false;
+     }else{
+         liste_voitures[nbVoitures]=voiture_a_ajouter;
+         nbVoitures ++;
+         voiture_a_ajouter.proprietaire = this ; 
+         return true;
+     }
+    }
     
     @Override
     public String toString() {

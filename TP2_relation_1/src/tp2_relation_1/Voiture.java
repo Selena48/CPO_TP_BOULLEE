@@ -15,12 +15,14 @@ public class Voiture {
     modele = modele_param;
     marque = marque_param;
     puissanceCV = puissance_param;
+    proprietaire = null;
 }
     
     /*Attributs*/
     String modele;
     String marque;
     int puissanceCV;
+    Personne proprietaire ;
    
     
     @Override
