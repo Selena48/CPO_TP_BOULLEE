@@ -24,6 +24,8 @@ public class TP2_relation_1 {
     
         bob.ajouter_voiture( une2008);
         bob.ajouter_voiture( uneMicra);
+        bob.ajouter_voiture( uneClio);
+        bob.ajouter_voiture( uneAutreClio);
 
         
         reno.ajouter_voiture( uneClio);

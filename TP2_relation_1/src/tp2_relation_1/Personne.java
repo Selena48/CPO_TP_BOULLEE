@@ -25,7 +25,7 @@ public class Personne {
     Voiture [] liste_voitures ;
    
     public boolean ajouter_voiture( Voiture voiture_a_ajouter) {
-     if (voiture_a_ajouter.proprietaire != null){
+     if (voiture_a_ajouter.proprietaire != null || nbVoitures>=3){
          return false;
      }else{
          liste_voitures[nbVoitures]=voiture_a_ajouter;
