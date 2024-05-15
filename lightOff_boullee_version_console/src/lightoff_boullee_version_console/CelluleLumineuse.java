@@ -23,6 +23,8 @@ public class CelluleLumineuse {
     public void activerCellule() {
         if(etat==false){
             etat = true;
+        }else{
+            etat = false;
         }
    }
     
