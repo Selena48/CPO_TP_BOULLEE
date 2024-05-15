@@ -34,15 +34,15 @@ public class GrilleDeCellules {
     }
     
     public void activerLigneColonneOuDiagonaleAleatoire() {
-        int nombreAleatoire = 0 + (int)(Math.random() * ((3 - 0) + 1));
+        int nombreAleatoire = (int)(Math.random() * 4);
         switch(nombreAleatoire)
         {
             case 0:
-                int nombreAleatoire2 = 0 + (int)(Math.random() * ((nbColonnes - 0) + 1));
+                int nombreAleatoire2 = (int)(Math.random() * nbColonnes);
                 activerColonneDeCellules(nombreAleatoire2);
             break;
             case 1:
-                int nombreAleatoire3 = 0 + (int)(Math.random() * ((nbLignes - 0) + 1));
+                int nombreAleatoire3 = (int)(Math.random() * nbLignes);
                 activerLigneDeCellules(nombreAleatoire3);
             break;
             case 2:
