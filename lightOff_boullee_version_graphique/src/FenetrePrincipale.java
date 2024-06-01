@@ -147,7 +147,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         setPreferredSize(new java.awt.Dimension(600, 600));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        PanneauGrille.setBackground(new java.awt.Color(204, 0, 102));
+        PanneauGrille.setBackground(new java.awt.Color(62, 53, 58));
 
         javax.swing.GroupLayout PanneauGrilleLayout = new javax.swing.GroupLayout(PanneauGrille);
         PanneauGrille.setLayout(PanneauGrilleLayout);
@@ -162,7 +162,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauGrille, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 400, 400));
 
-        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(255, 153, 153));
+        PanneauBoutonsVerticaux.setBackground(new java.awt.Color(57, 38, 51));
 
         javax.swing.GroupLayout PanneauBoutonsVerticauxLayout = new javax.swing.GroupLayout(PanneauBoutonsVerticaux);
         PanneauBoutonsVerticaux.setLayout(PanneauBoutonsVerticauxLayout);
@@ -177,7 +177,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
 
         getContentPane().add(PanneauBoutonsVerticaux, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 400));
 
-        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(255, 153, 153));
+        PanneauBoutonsHorizontaux.setBackground(new java.awt.Color(57, 38, 51));
 
         javax.swing.GroupLayout PanneauBoutonsHorizontauxLayout = new javax.swing.GroupLayout(PanneauBoutonsHorizontaux);
         PanneauBoutonsHorizontaux.setLayout(PanneauBoutonsHorizontauxLayout);

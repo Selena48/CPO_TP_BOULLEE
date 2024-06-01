@@ -7,7 +7,10 @@
  *
  * @author NB-X02
  */
+import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import lightoff_boullee_version_console.CelluleLumineuse;
 
@@ -17,14 +20,22 @@ public class CelluleGraphique extends JButton {
     CelluleLumineuse celluleLumineuseAssociee;
     // constructeur (appelé depuis FenetrePrincipale)
     public CelluleGraphique(CelluleLumineuse celluleLumineuseAssociee, int l,int h) {
-    this.largeur = l;
-    this.hauteur = h;
-    this.celluleLumineuseAssociee = celluleLumineuseAssociee;
+        this.largeur = l;
+        this.hauteur = h;
+        this.celluleLumineuseAssociee = celluleLumineuseAssociee;
     }
     // Methode gérant le dessin de la cellule
     @Override
     protected void paintComponent(Graphics g) {
-    super.paintComponent(g);
-    this.setText(celluleLumineuseAssociee.toString());
+        Image imageADessiner = null;
+        if (celluleLumineuseAssociee.estEteint() == true) {
+            imageADessiner = new ImageIcon(getClass().getResource("/images/imgAllume.png")).getImage();
+        } else {
+            imageADessiner = new ImageIcon(getClass().getResource("/images/imgEteint.png")).getImage();
+        }
+        // Dessin de l'image dans le composant
+        if (imageADessiner != null) {
+        g.drawImage(imageADessiner, 0, 0, this);
+        }
     }
 }
