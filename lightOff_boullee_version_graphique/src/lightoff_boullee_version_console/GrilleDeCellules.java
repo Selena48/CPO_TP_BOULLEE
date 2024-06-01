@@ -4,6 +4,8 @@
  */
 package lightoff_boullee_version_console;
 
+import java.awt.Component;
+
 /**
  *
  * @author NB-X02
@@ -12,9 +14,9 @@ public class GrilleDeCellules {
     
     int nbLignes;
     int nbColonnes;
-    CelluleLumineuse matriceCellules[][];
+    public CelluleLumineuse matriceCellules[][];
     
-    GrilleDeCellules(int nbL,int nbC){     
+    public GrilleDeCellules(int nbL,int nbC){     
         nbLignes = nbL;
         nbColonnes = nbC;
         matriceCellules = new CelluleLumineuse[nbLignes][nbColonnes];
@@ -24,6 +26,7 @@ public class GrilleDeCellules {
             }
         }
     }
+   
     
     /**
      * Eteint toutes les cellules de la grille
