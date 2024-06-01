@@ -15,6 +15,10 @@ public class FenetreVictoire extends javax.swing.JFrame {
     public FenetreVictoire() {
         initComponents();
     }
+    
+    public void setNbShotText(String text) {
+        this.nb_shot.setText(text);
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -25,27 +29,44 @@ public class FenetreVictoire extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        victory_message = new javax.swing.JLabel();
+        shot_message = new javax.swing.JLabel();
+        nb_shot = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Victoire");
+        victory_message.setText("Félicitations ! Vous avez éteint toutes les lumières");
+
+        shot_message.setText("Nombre de coups :");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(90, Short.MAX_VALUE)
+                .addComponent(victory_message)
+                .addGap(88, 88, 88))
             .addGroup(layout.createSequentialGroup()
-                .addGap(172, 172, 172)
-                .addComponent(jLabel1)
-                .addContainerGap(187, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(164, 164, 164)
+                        .addComponent(shot_message))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(196, 196, 196)
+                        .addComponent(nb_shot, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(141, 141, 141)
-                .addComponent(jLabel1)
-                .addContainerGap(143, Short.MAX_VALUE))
+                .addGap(76, 76, 76)
+                .addComponent(victory_message)
+                .addGap(18, 18, 18)
+                .addComponent(shot_message)
+                .addGap(18, 18, 18)
+                .addComponent(nb_shot)
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         pack();
@@ -87,6 +108,8 @@ public class FenetreVictoire extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel nb_shot;
+    private javax.swing.JLabel shot_message;
+    private javax.swing.JLabel victory_message;
     // End of variables declaration//GEN-END:variables
 }

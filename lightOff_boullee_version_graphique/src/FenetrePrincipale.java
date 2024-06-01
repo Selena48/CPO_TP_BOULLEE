@@ -40,6 +40,14 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         bouton_diagonale_montante.setEnabled(false);
         bouton_diagonale_descendante.setEnabled(false);
     }
+    
+    public void endTheParty(){
+        System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
+        desactiverBoutons();
+        FenetreVictoire f = new FenetreVictoire() ;
+        f.setNbShotText(String.valueOf(nbCoups));
+        f.setVisible(true) ; 
+    }
 
     
     /**
@@ -88,10 +96,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     repaint();
                     nbCoups++;
                     if (grille.cellulesToutesEteintes()) {
-                        System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
-                        desactiverBoutons();
-                        FenetreVictoire f = new FenetreVictoire() ;
-                        f.setVisible(true) ;
+                        endTheParty();
                     }
                 }
             };
@@ -109,10 +114,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     repaint();
                     nbCoups++;
                     if (grille.cellulesToutesEteintes()) {
-                        System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
-                        desactiverBoutons() ;
-                        FenetreVictoire f = new FenetreVictoire() ;
-                        f.setVisible(true) ;
+                        endTheParty();      
                     }
                 }
             };
@@ -215,10 +217,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         repaint();
         nbCoups++;
         if (grille.cellulesToutesEteintes()) {
-            System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
-            desactiverBoutons(); 
-            FenetreVictoire f = new FenetreVictoire() ;
-            f.setVisible(true) ;
+            endTheParty();
         }
     }//GEN-LAST:event_bouton_diagonale_montanteActionPerformed
 
@@ -228,10 +227,7 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         repaint();
         nbCoups++;
         if (grille.cellulesToutesEteintes()) {
-            System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
-            desactiverBoutons(); 
-            FenetreVictoire f = new FenetreVictoire() ;
-            f.setVisible(true) ;
+            endTheParty();
         }        
     }//GEN-LAST:event_bouton_diagonale_descendanteActionPerformed
 
