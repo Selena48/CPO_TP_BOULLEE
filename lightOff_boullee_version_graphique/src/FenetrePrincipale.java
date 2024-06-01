@@ -89,7 +89,9 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     nbCoups++;
                     if (grille.cellulesToutesEteintes()) {
                         System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
-                        desactiverBoutons(); 
+                        desactiverBoutons();
+                        FenetreVictoire f = new FenetreVictoire() ;
+                        f.setVisible(true) ;
                     }
                 }
             };
@@ -109,6 +111,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
                     if (grille.cellulesToutesEteintes()) {
                         System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
                         desactiverBoutons() ;
+                        FenetreVictoire f = new FenetreVictoire() ;
+                        f.setVisible(true) ;
                     }
                 }
             };
@@ -213,6 +217,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         if (grille.cellulesToutesEteintes()) {
             System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
             desactiverBoutons(); 
+            FenetreVictoire f = new FenetreVictoire() ;
+            f.setVisible(true) ;
         }
     }//GEN-LAST:event_bouton_diagonale_montanteActionPerformed
 
@@ -224,6 +230,8 @@ public class FenetrePrincipale extends javax.swing.JFrame {
         if (grille.cellulesToutesEteintes()) {
             System.out.println("Félicitations ! Vous avez éteint toutes les lumières. Nombre de coups: "+nbCoups+" coups");
             desactiverBoutons(); 
+            FenetreVictoire f = new FenetreVictoire() ;
+            f.setVisible(true) ;
         }        
     }//GEN-LAST:event_bouton_diagonale_descendanteActionPerformed
 
